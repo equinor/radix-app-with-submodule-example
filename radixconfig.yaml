@@ -1,0 +1,15 @@
+apiVersion: radix.equinor.com/v1
+kind: RadixApplication
+metadata:
+  name: radix-app-with-submodule-example
+spec:
+  environments:
+    - name: prod
+      build:
+        from: main
+  components:
+    - name: redis
+      src: redis
+      ports:
+        - name: redis
+          port: 8001
