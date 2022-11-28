@@ -9,7 +9,9 @@ spec:
         from: main
   components:
     - name: redis
+      secrets:
+        - REDIS_PASSWORD
       src: redis
       ports:
         - name: redis
-          port: 8001
+          port: 6379
